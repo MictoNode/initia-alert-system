@@ -33,6 +33,8 @@ This guide will help you set up a system to monitor your Initia validator and al
 
 2. **Paste the following content into the `script.sh` file:**
 
+   Notice:`local_height=$(curl -s localhost:15657/status | jq -r .result.sync_info.latest_block_height)` don't forget to change the RPC PORT.
+   
     ```bash
     #!/bin/bash
 
@@ -70,7 +72,7 @@ This guide will help you set up a system to monitor your Initia validator and al
 
     Replace `YOUR_TELEGRAM_BOT_TOKEN` and `YOUR_CHAT_ID` with your actual values.
 
-3. **Make the file executable:**
+4. **Make the file executable:**
 
     ```bash
     chmod +x ~/script.sh
