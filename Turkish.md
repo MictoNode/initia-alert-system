@@ -34,6 +34,7 @@ Bu rehber, Initia validator'unuzu izlemek ve blok sayısı 100'ü geçtiğinde s
     ```
 
 2. **Aşağıdaki içeriği `script.sh` dosyasına yapıştırın:**
+   Not:`local_height=$(curl -s localhost:15657/status | jq -r .result.sync_info.latest_block_height)` kodundaki RPC PORT'u değiştirmeyi unutmayın.
 
     ```bash
     #!/bin/bash
