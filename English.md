@@ -93,7 +93,7 @@ We will use `crontab` to run the script every 5 minutes.
 2. **Add the following line:**
 
     ```bash
-    */5 * * * * ~/script.sh
+    */5 * * * * ~/script.sh >> ~/cron_log.txt 2>&1
     ```
 
 3. **Restart Cron**
