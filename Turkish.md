@@ -58,13 +58,13 @@ Bu rehber, Initia validator'unuzu izlemek ve blok sayısı 100'ü geçtiğinde s
 
     # Blocks left 100'den büyükse restart komutunu çalıştırıyoruz
     if [ $blocks_left -gt 100 ]; then
-        echo "Kalan blok sayısı 100'den büyük. initiad yeniden başlatılıyor..." | tee -a ~/initia_log.txt
+        echo "Kalan blok sayısı 100'den büyük. Initia yeniden başlatılıyor..." | tee -a ~/initia_log.txt
         sudo systemctl restart initiad
 
         # Telegram botu üzerinden uyarı gönderme
         BOT_TOKEN="YOUR_TELEGRAM_BOT_TOKEN"
         CHAT_ID="YOUR_CHAT_ID"
-        MESSAGE="Uyarı! Kalan blok sayısı $blocks_left olarak tespit edildi. initiad yeniden başlatıldı."
+        MESSAGE="Uyarı! Kalan blok sayısı $blocks_left olarak tespit edildi. Initia yeniden başlatıldı."
 
         curl -s -X POST "https://api.telegram.org/bot$BOT_TOKEN/sendMessage" -d chat_id="$CHAT_ID" -d text="$MESSAGE" > /dev/null
     else
