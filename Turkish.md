@@ -95,7 +95,7 @@ Script'in her 5 dakikada bir çalışması için `crontab`'ı kullanacağız.
 2. **Aşağıdaki satırı ekleyin:**
 
     ```bash
-    */5 * * * * ~/script.sh
+    */5 * * * * ~/script.sh >> ~/cron_log.txt 2>&1
     ```
     
 3. **Cron'u tekrar başlatalım:**
