@@ -34,6 +34,8 @@ This guide will help you set up a system to monitor your Initia validator and al
 2. **Paste the following content into the `script.sh` file:**
 
    Notice:`local_height=$(curl -s localhost:15657/status | jq -r .result.sync_info.latest_block_height)` don't forget to change the RPC PORT.
+
+   Notice2:`sudo systemctl restart initiad` if you are using ‘initia’, don't forget to change it.
    
     ```bash
     #!/bin/bash
