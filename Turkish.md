@@ -37,6 +37,8 @@ Bu rehber, Initia validator'unuzu izlemek ve blok sayısı 100'ü geçtiğinde s
 
    Not:`local_height=$(curl -s localhost:15657/status | jq -r .result.sync_info.latest_block_height)` RPC PORT'u değiştirmeyi unutmayın.
 
+   Not2:`sudo systemctl restart initiad` eğer initia olarak kullanıyorsanız değiştirmeyi unutmayın.
+
     ```bash
     #!/bin/bash
 
